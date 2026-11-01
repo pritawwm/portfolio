@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>404 | Article not found - nature miscommunications</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+    <script>
+      (function () {
+        var OLD_ORIGIN = "https://old.pritamsaha.co.in";
+        var OLD_PAGES = ["about", "date", "f1_animated_lap", "game", "interests", "music"];
+        var OLD_FOLDERS = ["assets", "css", "js"];
+        var parts = location.pathname.split("/").filter(Boolean);
+        var first = (parts[0] || "").replace(/\.html$/, "");
+
+        if (parts.length === 1 && first === "resume") {
+          location.replace("/" + location.hash);
+        } else if (
+          (parts.length === 1 && OLD_PAGES.indexOf(first) !== -1) ||
+          OLD_FOLDERS.indexOf(parts[0]) !== -1
+        ) {
+          location.replace(
+            OLD_ORIGIN + location.pathname + location.search + location.hash,
+          );
+        }
+      })();
+    </script>
+    <style>
+      :root {
+        --bg: #ffffff;
+        --text: #222222;
+        --muted: #555555;
+        --link: #025e8d;
+        --accent: #e63323;
+        --border: #dcdcdc;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #14171a;
+          --text: #e6e6e6;
+          --muted: #aab2b8;
+          --link: #6cb8e6;
+          --border: #343a40;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        border-top: 4px solid var(--accent);
+        background: var(--bg);
+        color: var(--text);
+        font-family: "PT Serif", Georgia, "Times New Roman", serif;
+        line-height: 1.6;
+      }
+      header {
+        padding: 20px 5%;
+        border-bottom: 1px solid var(--border);
+      }
+      .brand {
+        color: var(--text);
+        font-family: "Merriweather", Georgia, serif;
+        font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        text-decoration: none;
+      }
+      main {
+        flex: 1;
+        width: 100%;
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 72px 5%;
+      }
+      .label {
+        margin: 0 0 8px;
+        color: var(--muted);
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-size: 0.95rem;
+      }
+      h1 {
+        margin: 0 0 20px;
+        font-family: "Merriweather", Georgia, serif;
+        font-size: clamp(2rem, 6vw, 3rem);
+        line-height: 1.2;
+      }
+      p {
+        margin: 0 0 24px;
+        font-size: 1.15rem;
+      }
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 28px;
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-size: 1.05rem;
+      }
+      a {
+        color: var(--link);
+        text-underline-offset: 4px;
+      }
+      a:focus-visible {
+        outline: 3px solid var(--link);
+        outline-offset: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="/">nature miscommunications</a>
+    </header>
+    <main>
+      <p class="label">Error 404</p>
+      <h1>Article not found</h1>
+      <p>
+        This page may have been retracted, relocated, or never passed peer
+        review.
+      </p>
+      <div class="links">
+        <a href="/">Back to the article</a>
+        <a href="https://old.pritamsaha.co.in">Previous portfolio site</a>
+      </div>
+    </main>
+  </body>
+</html>
