@@ -15,9 +15,7 @@
         var parts = location.pathname.split("/").filter(Boolean);
         var first = (parts[0] || "").replace(/\.html$/, "");
 
-        if (parts.length === 1 && first === "resume") {
-          location.replace("/" + location.hash);
-        } else if (
+        if (
           (parts.length === 1 && OLD_PAGES.indexOf(first) !== -1) ||
           OLD_FOLDERS.indexOf(parts[0]) !== -1
         ) {
@@ -126,7 +124,7 @@
         review.
       </p>
       <div class="links">
-        <a href="/">Back to the article</a>
+        <a href="/">Back to home</a>
         <a href="https://old.pritamsaha.co.in">Previous portfolio site</a>
       </div>
     </main>
